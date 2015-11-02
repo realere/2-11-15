@@ -1,9 +1,7 @@
 class CreateCategories < ActiveRecord::Migration
   def change
     create_table :categories do |t|
-      t.string :starters
-      t.string :mains
-      t.string :desserts
+      t.string :name
 
       t.timestamps null: false
     end

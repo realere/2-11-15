@@ -1,18 +1,18 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Starters:</strong>
-  <%= @category.starters %>
+  <strong>name:</strong>
+  <%= @category.name %>
+
 </p>
 
-<p>
-  <strong>Mains:</strong>
-  <%= @category.mains %>
-</p>
-
-<p>
-  <strong>Desserts:</strong>
-  <%= @category.desserts %>
+<p> 
+  <strong>recipes:</strong>
+  <br>
+  <% @category.recipes.each do |recipe| %>
+  <br>
+    <%= recipe.name %>
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_category_path(@category) %> |
