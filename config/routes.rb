@@ -1,12 +1,16 @@
 Rails.application.routes.draw do
   resources :categories
   resources :recipes
+  resources :ingredients
+  resources :quantities
 
 root to: 'home#welcome'
   get '/welcome', to: 'home#welcome'
   get '/categories', to: 'home#categories'
   get '/recipes', to: 'home#recipes'
   get '/search', to: 'home#search'
+  get '/quantities', to: 'home#quantities'
+  get 'ingredients', to: 'home#ingredients'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

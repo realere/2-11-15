@@ -10,13 +10,19 @@ class HomeController < ApplicationController
   def recipes
     
   end
+  def quantities
+    
+  end
+  def ingredients
+    
+  end
 
   def search
     case params[:options]
 
     when 'categories' then redirect_to(categories_path)
-    when 'recipes' then redirect_to(recipes_path)
-    when 'google' then redirect_to('http://www.google.co.uk')
+    when 'recipes' then redirect_to('http://bbcgoodfood.com')
+    # when 'google' then redirect_to('http://www.google.co.uk')
 
     else render :welcome
         

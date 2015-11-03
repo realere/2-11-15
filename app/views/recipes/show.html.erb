@@ -14,7 +14,16 @@
   <strong>description:</strong>
   <%= @recipe.description %>
 </p>
->
+<% @recipe.ingredients.each do |i| %>
+  <%= i.name %><br>
+<% end %>
+<p>
+  <strong>Ingredients:</strong><br>
+  <% @recipe.quantities.each do |quantity| %>
+    <%= quantity.quantity %>
+    <%= quantity.ingredient.try(:name) %><br>
+  <% end %>
+</p>
 
 <%= link_to 'Edit', edit_recipe_path(@recipe) %> |
 <%= link_to 'Back', recipes_path %>
